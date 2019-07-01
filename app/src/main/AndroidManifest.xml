@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wenjian.artinterview">
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.IntentActivity">
+
+            <intent-filter>
+                <!--action指定为字符串，需要完全匹配，并且区分大小写-->
+                <action android:name="com.wenjian.artinterview.TEST"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <!--如果需要activity接受隐式调用，则必须加上该category-->
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"
+                    android:scheme="file"
+                    />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".activity.LaunchModeActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".activity.SecondActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|locale|screenSize" />
+        <activity android:name=".activity.LifeActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ArtInterview</string>
+    <string name="no_id_cant_save">没有id的view无法保存和恢复状态</string>
+    <string name="launch_same_act">启动同一个activity</string>
+    <string name="start_another_activity">开启另一个activity</string>
+    <string name="launch_mode">启动模式</string>
+    <string name="start_by">隐式启动</string>
+</resources>
